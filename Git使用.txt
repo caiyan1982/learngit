@@ -38,3 +38,9 @@ git config --global user.email "youremail@example.com"
 
 10.查看提交历史日志。
 使用git reflog命令查询历史提交日志。
+
+11.撤销工作区的修改（用版本库中的版本替换工作区中的版本）。
+使用git checkout -- <file>命令撤销工作区的修改。
+
+12.撤销缓冲区的修改。
+使用git reset head <file>命令撤销缓冲区的修改。
