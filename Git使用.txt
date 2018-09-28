@@ -20,3 +20,9 @@ git config --global user.email "youremail@example.com"
 5.把文件添加到版本库。
 把文件添加到仓库：git add 文件名
 提交更改到仓库：git commit -m "更新描述"
+
+6.查看仓库状态。
+使用git status命令查看仓库当前状态。
+
+7.查看仓库修改内容。
+使用git diff <file>查看仓库修改内容。
