@@ -1,0 +1,18 @@
+1.下载Git
+从网站下载Git安装程序。官网下载地址：https://git-scm.com/downloads。
+
+2.安装Git
+选择安装目录，安装Git。
+
+3.配置用户名和email。
+配置全局用户名和email。
+从开始菜单中打开Git Bash；
+在命令行中输入如下语句：
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+
+4.创建Git仓库。
+从开始菜单中打开Git Bash。
+使用cd命令进入目标目录。
+使用mkdir创建仓库目录。
+在仓库目录中使用git init将该目录变为Git仓库。
