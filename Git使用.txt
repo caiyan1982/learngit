@@ -16,3 +16,7 @@ git config --global user.email "youremail@example.com"
 使用cd命令进入目标目录。
 使用mkdir创建仓库目录。
 在仓库目录中使用git init将该目录变为Git仓库。
+
+5.把文件添加到版本库。
+把文件添加到仓库：git add 文件名
+提交更改到仓库：git commit -m "更新描述"
