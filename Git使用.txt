@@ -71,7 +71,12 @@ git config --global user.email "youremail@example.com"
 使用git branch命令查看版本库的所有分支。
 
 19.创建并切换分支。
-使用git branch <name>创建分支。
-使用git checkout <name>切换分支。
-也可使用git checkout -b <name>创建并切换分支。
+使用git branch <name>命令创建分支。
+使用git checkout <name>命令切换分支。
+也可使用git checkout -b <name>命令创建并切换分支。
 
+20.合并分支。
+使用git merge <name>命令合并某分支到当前分支。
+
+21.删除分支。
+使用git branch -d <name>命令删除指定分支。
