@@ -81,4 +81,5 @@ git config --global user.email "youremail@example.com"
 21.删除分支。
 使用git branch -d <name>命令删除指定分支。
 
-test
+22.查看分支合并情况。
+使用git log --graph --pretty=oneline --abbrev-commit命令查看分支合并情况。
