@@ -66,3 +66,12 @@ git config --global user.email "youremail@example.com"
 
 17.克隆远程库到本地。
 使用git clone <url>命令将远程库克隆到本地。
+
+18.查看分支。
+使用git branch命令查看版本库的所有分支。
+
+19.创建并切换分支。
+使用git branch <name>创建分支。
+使用git checkout <name>切换分支。
+也可使用git checkout -b <name>创建并切换分支。
+
