@@ -61,4 +61,8 @@ git config --global user.email "youremail@example.com"
 使用git remote add <name> <url>命令将本地版本库与远程库相关联。
 
 16.将本地库中的文件推送到远程库。
-使用git push -u <name> <branch name>命令将本地版本库中的文件推送到远程库。
+使用git push -u <name> <branch name>命令将本地版本库推送到远程库，同时指定<name>为默认远程库。
+使用git push [name] [branch name]命令将本地版本库推送到远程库，不填参数则当前分支推送到默认远程库。
+
+17.克隆远程库到本地。
+使用git clone <url>命令将远程库克隆到本地。
