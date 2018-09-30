@@ -84,4 +84,3 @@ git config --global user.email "youremail@example.com"
 22.查看分支合并情况。
 使用git log --graph --pretty=oneline --abbrev-commit命令查看分支合并情况。
 
-
