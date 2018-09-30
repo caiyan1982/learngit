@@ -99,3 +99,5 @@ git config --global user.email "youremail@example.com"
 
 26.删除存储的工作区状态。
 使用git stash drop [stash] 命令删除存储的工作区状态。
+
+27.
