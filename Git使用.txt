@@ -86,3 +86,5 @@ git config --global user.email "youremail@example.com"
 
 23.合并分支时禁用Fast forward模式。
 使用git merge --no-ff -m "update message" <branch name>命令合并分支。
+
+24.
