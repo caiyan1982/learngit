@@ -118,3 +118,10 @@ git config --global user.email "youremail@example.com"
 
 33.删除标签。
 使用git tag -d <tag>命令删除指定标签。
+
+34.推送标签到远程库。
+使用git push origin <tag>命令推送指定标签到远程库。
+使用git push origin --tags命令推送所有标签到远程库。
+
+35.删除远程库中的标签。
+先删除本地标签，再使用git push origin :refs/tags/<tag>命令删除远程库中的标签。
