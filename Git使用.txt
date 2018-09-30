@@ -1,4 +1,4 @@
-﻿1.下载Git
+1.下载Git
 从网站下载Git安装程序。官网下载地址：https://git-scm.com/downloads。
 
 2.安装Git
@@ -20,7 +20,7 @@ git config --global user.email "youremail@example.com"
 5.把文件添加到版本库。
 在工作区新增文件。
 使用git add <file>命令提交更新到缓冲区。
-使用git commit -m "更新描述"命令提交更新到版本库，在版本库中新增文件。
+使用git commit -m "message"命令提交更新到版本库，在版本库中新增文件。
 
 6.更新文件。
 修改文件内容。
@@ -95,10 +95,26 @@ git config --global user.email "youremail@example.com"
 
 25.恢复工作区状态。
 使用git stash pop命令恢复到最近存储的工作区状态，并删除该状态。
-或者使用git stash apply [stash]命令恢复工作区状态（不删除存储的工作区状态），不如不加状态编号，则恢复到最近一个状态。
+或者使用git stash apply [stash]命令恢复工作区状态（不删除存储的工作区状态），不加状态编号，则恢复到最近一个状态。
 
 26.删除存储的工作区状态。
 使用git stash drop [stash] 命令删除存储的工作区状态。
 
 27.创建本地分支并与远程版本库中的分支关联。
 使用git branch -b <branch> <romote name/branch>命令创建本地分支并与远程分支关联。
+
+29.获取远程库的版本。
+使用git pull [remote] [branch]命令获取远程库的最新版本。
+
+30.新建标签。
+使用git tag <tag> [commit]命令为某个提交版本新建标签，不加版本号，则在最新提交版本上新建标签。
+使用git tag -a <tag> -m <message>命令可以指定标签信息。
+
+31.查看标签。
+使用git tag命令查看所有标签。
+
+32.查看标签详情。
+使用git show <tag>查看标签详情。
+
+33.删除标签。
+使用git tag -d <tag>命令删除指定标签。
