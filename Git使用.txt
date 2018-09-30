@@ -25,7 +25,7 @@ git config --global user.email "youremail@example.com"
 6.更新文件。
 修改文件内容。
 使用git add <file>命令提交更新到缓冲区。
-使用git commit -m "更新描述"命令提交更新到版本库。
+使用git commit -m "update message"命令提交更新到版本库。
 
 
 7.查看仓库状态。
@@ -75,7 +75,7 @@ git config --global user.email "youremail@example.com"
 使用git checkout <name>命令切换分支。
 也可使用git checkout -b <name>命令创建并切换分支。
 
-20.合并分支。
+20.合并分支（Fast forward模式）。
 使用git merge <name>命令合并某分支到当前分支。
 
 21.删除分支。
@@ -84,4 +84,5 @@ git config --global user.email "youremail@example.com"
 22.查看分支合并情况。
 使用git log --graph --pretty=oneline --abbrev-commit命令查看分支合并情况。
 
-
+23.合并分支时禁用Fast forward模式。
+使用git merge --no-ff -m "update message" <branch name>命令合并分支。
