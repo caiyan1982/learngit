@@ -100,4 +100,5 @@ git config --global user.email "youremail@example.com"
 26.删除存储的工作区状态。
 使用git stash drop [stash] 命令删除存储的工作区状态。
 
-27.
+27.创建本地分支并与远程版本库中的分支关联。
+使用git branch -b <branch> <romote name/branch>命令创建本地分支并与远程分支关联。
