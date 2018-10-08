@@ -125,3 +125,6 @@ git config --global user.email "youremail@example.com"
 
 35.删除远程库中的标签。
 先删除本地标签，再使用git push origin :refs/tags/<tag>命令删除远程库中的标签。
+
+36.删除远程库。
+使用git remote rm <name>命令删除远程库。
