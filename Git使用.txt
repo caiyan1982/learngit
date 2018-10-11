@@ -128,3 +128,18 @@ git config --global user.email "youremail@example.com"
 
 36.删除远程库。
 使用git remote rm <name>命令删除远程库。
+
+37.忽略文件。
+在工作区的根目录下新建.gitignore文件，在文件中添加要忽略的文件名。windows平台下，使用文本编辑器保存，可以保存无文件名的.gitignore文件。
+忽略目录下的所有文件/path/*。
+https://github.com/github/gitignore内有各种写好的配置文件。
+
+38.检查忽略文件。
+使用git check-ignore -v <file>命令检查文件被哪个规则忽略。
+
+39.给命令取别名。
+使用git config [--global] alias.<alias> <cmd>命令为命令取别名。使用--global参数则适用于所有库，不使用则只适用于当前库。
+例：git config alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+40.取消命令的别名。
+使用git config [--global] --unset alias.<alias> 命令取消命令的别名。使用--global参数则适用于所有库，不使用则只适用于当前库。
