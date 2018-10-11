@@ -32,7 +32,7 @@ git config --global user.email "youremail@example.com"
 使用git status命令查看仓库当前状态。
 
 8.查看仓库修改内容。
-使用git diff <file>查看仓库修改内容。
+使用git diff [--staged][file]查看仓库修改内容。不使用--staged参数显示尚未暂存的改动，使用--staged参数显示暂存区内的改动内容。
 
 9.回退版本。
 使用git reset --hard 命令，后跟参数回退到指定版本。
@@ -65,7 +65,7 @@ git config --global user.email "youremail@example.com"
 使用git push [name] [branch]命令将本地版本库推送到远程库，不填参数则当前分支推送到默认远程库。
 
 17.克隆远程库到本地。
-使用git clone <url>命令将远程库克隆到本地。
+使用git clone <url> [directory]命令将远程库克隆到本地。填directory参数则创建相应目录作为本地库。
 
 18.查看分支。
 使用git branch命令查看版本库的所有分支。
