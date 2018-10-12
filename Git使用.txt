@@ -54,8 +54,9 @@ git config --global user.email "youremail@example.com"
 
 14.删除文件。
 直接在文件管理器中删除文件。
-使用git add <file>命令提交更新到缓冲区。或者直接使用git rm <file>命令删除工作区中的文件，并提交更新到缓冲区。
+使用git add/rm <file>命令提交更新到缓冲区。或者直接使用git rm -f <file>命令删除工作区中的文件，并提交更新到缓冲区。
 使用git commit -m "更新描述"命令提交更新到版本库，删除版本库中的文件。
+如果仅想删除缓冲区的文件，而保留工作区中的文件，添加--cached参数。
 
 15.将本地版本库添加到远程库。
 使用git remote add <name> <url>命令将本地版本库与远程库相关联。
