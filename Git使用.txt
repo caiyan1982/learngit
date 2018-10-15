@@ -94,53 +94,59 @@ git config --global user.email "youremail@example.com"
 25.查看存储的工作区状态。
 使用git stash list命令查看存储了的工作区状态。
 
-25.恢复工作区状态。
+26.恢复工作区状态。
 使用git stash pop命令恢复到最近存储的工作区状态，并删除该状态。
 或者使用git stash apply [stash]命令恢复工作区状态（不删除存储的工作区状态），不加状态编号，则恢复到最近一个状态。
 
-26.删除存储的工作区状态。
+27.删除存储的工作区状态。
 使用git stash drop [stash] 命令删除存储的工作区状态。
 
-27.创建本地分支并与远程版本库中的分支关联。
-使用git branch -b <branch> <romote name/branch>命令创建本地分支并与远程分支关联。
+28.创建本地分支并与远程版本库中的分支关联。
+使用git branch -b <branch> <remote/branch>命令创建本地分支并与远程分支关联。
 
-29.获取远程库的版本。
+29.设置本地分支跟踪远程分支。
+使用git branch -u <remote/branch>命令将本地分支与远程分支关联。
+
+30.删除本地分支跟踪的远程分支。
+使用git branch --unset-upstream命令删除本地分支跟踪的远程分支。
+
+31.获取远程库的版本。
 使用git pull [remote] [branch]命令获取远程库的最新版本。
 
-30.新建标签。
+32.新建标签。
 使用git tag <tag> [commit]命令为某个提交版本新建标签，不加版本号，则在最新提交版本上新建标签。
 使用git tag -a <tag> -m <message>命令可以指定标签信息。
 
-31.查看标签。
+33.查看标签。
 使用git tag命令查看所有标签。
 
-32.查看标签详情。
+34.查看标签详情。
 使用git show <tag>查看标签详情。
 
-33.删除标签。
+35.删除标签。
 使用git tag -d <tag>命令删除指定标签。
 
-34.推送标签到远程库。
+36.推送标签到远程库。
 使用git push origin <tag>命令推送指定标签到远程库。
 使用git push origin --tags命令推送所有标签到远程库。
 
-35.删除远程库中的标签。
+37.删除远程库中的标签。
 先删除本地标签，再使用git push origin :refs/tags/<tag>命令删除远程库中的标签。
 
-36.删除远程库。
+38.删除远程库。
 使用git remote rm <name>命令删除远程库。
 
-37.忽略文件。
+39.忽略文件。
 在工作区的根目录下新建.gitignore文件，在文件中添加要忽略的文件名。windows平台下，使用文本编辑器保存，可以保存无文件名的.gitignore文件。
 忽略目录下的所有文件/path/*。
 https://github.com/github/gitignore内有各种写好的配置文件。
 
-38.检查忽略文件。
+40.检查忽略文件。
 使用git check-ignore -v <file>命令检查文件被哪个规则忽略。
 
-39.给命令取别名。
+41.给命令取别名。
 使用git config [--global] alias.<alias> <cmd>命令为命令取别名。使用--global参数则适用于所有库，不使用则只适用于当前库。
 例：git config alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-40.取消命令的别名。
+42.取消命令的别名。
 使用git config [--global] --unset alias.<alias> 命令取消命令的别名。使用--global参数则适用于所有库，不使用则只适用于当前库。
