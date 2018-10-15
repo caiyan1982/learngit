@@ -150,3 +150,8 @@ https://github.com/github/gitignore内有各种写好的配置文件。
 
 42.取消命令的别名。
 使用git config [--global] --unset alias.<alias> 命令取消命令的别名。使用--global参数则适用于所有库，不使用则只适用于当前库。
+
+43.将分支变基到目标分支。
+使用git rebase <base branch>命令将当前分支相对于base branch的修改变基到base branch。
+使用git rebase <base branch> <source branch>命令将source branch相对于base branch的修改变基到base branch。
+使用git rebase --onto <base branch> <feature branch> <source branch>命令将source branch相对于feature branch的修改变基到base branch。
