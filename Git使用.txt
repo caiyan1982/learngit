@@ -63,7 +63,7 @@ git config --global user.email "youremail@example.com"
 
 16.将本地库中的文件推送到远程库。
 使用git push -u <name> <branch>命令将本地版本库推送到远程库，同时指定<name>为默认远程库。
-使用git push [name] [branch]命令将本地版本库推送到远程库，不填参数则当前分支推送到默认远程库。
+使用git push [name] [branch][:remote branch]命令将本地版本库推送到远程库，不填参数则当前分支推送到默认远程库。
 
 17.克隆远程库到本地。
 使用git clone <url> [directory]命令将远程库克隆到本地。填directory参数则创建相应目录作为本地库。
@@ -74,7 +74,7 @@ git config --global user.email "youremail@example.com"
 19.创建并切换分支。
 使用git branch <branch>命令创建分支。
 使用git checkout <branch>命令切换分支。
-也可使用git checkout -b <branch>命令创建并切换分支。
+也可使用git checkout -b <branch> [remote/branch]命令创建并切换分支，加remote/branch参数可使本地分支与远程分支关联。
 
 20.合并分支（Fast forward模式）。
 使用git merge <branch>命令合并某分支到当前分支。
