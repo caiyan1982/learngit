@@ -27,7 +27,6 @@ git config --global user.email "youremail@example.com"
 使用git add <file>命令提交更新到缓冲区。
 使用git commit -m "update message"命令提交更新到版本库。
 
-
 7.查看仓库状态。
 使用git status命令查看仓库当前状态。
 
@@ -155,3 +154,11 @@ https://github.com/github/gitignore内有各种写好的配置文件。
 使用git rebase <base branch>命令将当前分支相对于base branch的修改变基到base branch。
 使用git rebase <base branch> <source branch>命令将source branch相对于base branch的修改变基到base branch。
 使用git rebase --onto <base branch> <feature branch> <source branch>命令将source branch相对于feature branch的修改变基到base branch。
+
+44.归档版本库。
+使用git archive <branch> --format=zip > <name.zip>命令将版本库打包成zip压缩包。
+
+45.查看分支间的提交记录区别。
+使用git log <destination branch>..<source branch>命令显示在source branch分支中已提交还未合并到destination branch分支的提交记录。
+使用git log <branch 1> <branch 2> ^|--not <branch 3>命令显示包含在branch 1和branch 2分支中，但不包含在branch 3分支中的提交记录。
+使用git log <branch 1>...<branch 2>命令显示被两个分支其中一个包含，而不被另一个分支包含的提交记录。
