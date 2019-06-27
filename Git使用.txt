@@ -67,98 +67,101 @@ git config --global user.email "youremail@example.com"
 17.克隆远程库到本地。
 使用git clone <url> [directory]命令将远程库克隆到本地。填directory参数则创建相应目录作为本地库。
 
-18.查看分支。
+18.查看远程库信息。
+使用git remote [-v]命令显示远程库。使用-v参数显示详细远程库信息。
+
+19.查看分支。
 使用git branch命令查看版本库的所有分支。
 
-19.创建并切换分支。
+20.创建并切换分支。
 使用git branch <branch>命令创建分支。
 使用git checkout <branch>命令切换分支。
 也可使用git checkout -b <branch> [remote/branch]命令创建并切换分支，加remote/branch参数可使本地分支与远程分支关联。
 
-20.合并分支（Fast forward模式）。
+21.合并分支（Fast forward模式）。
 使用git merge <branch>命令合并某分支到当前分支。
 
-21.删除分支。
+22.删除分支。
 使用git branch -d <branch>命令删除指定分支。
 
-22.查看分支合并情况。
+23.查看分支合并情况。
 使用git log --graph --pretty=oneline --abbrev-commit命令查看分支合并情况。
 
-23.合并分支时禁用Fast forward模式。
+24.合并分支时禁用Fast forward模式。
 使用git merge --no-ff -m "update message" <branch>命令合并分支。
 
-24.存储工作区当前状态。
+25.存储工作区当前状态。
 使用git stash命令存储工作区当前未提交状态。
 
-25.查看存储的工作区状态。
+26.查看存储的工作区状态。
 使用git stash list命令查看存储了的工作区状态。
 
-26.恢复工作区状态。
+27.恢复工作区状态。
 使用git stash pop命令恢复到最近存储的工作区状态，并删除该状态。
 或者使用git stash apply [stash]命令恢复工作区状态（不删除存储的工作区状态），不加状态编号，则恢复到最近一个状态。
 
-27.删除存储的工作区状态。
+28.删除存储的工作区状态。
 使用git stash drop [stash] 命令删除存储的工作区状态。
 
-28.创建本地分支并与远程版本库中的分支关联。
+29.创建本地分支并与远程版本库中的分支关联。
 使用git branch -b <branch> <remote/branch>命令创建本地分支并与远程分支关联。
 
-29.设置本地分支跟踪远程分支。
+30.设置本地分支跟踪远程分支。
 使用git branch -u <remote/branch>命令将本地分支与远程分支关联。
 
-30.删除本地分支跟踪的远程分支。
+31.删除本地分支跟踪的远程分支。
 使用git branch --unset-upstream命令删除本地分支跟踪的远程分支。
 
-31.获取远程库的版本。
+32.获取远程库的版本。
 使用git pull [remote] [branch]命令获取远程库的最新版本。
 
-32.新建标签。
+33.新建标签。
 使用git tag <tag> [commit]命令为某个提交版本新建标签，不加版本号，则在最新提交版本上新建标签。
 使用git tag -a <tag> -m <message>命令可以指定标签信息。
 
-33.查看标签。
+34.查看标签。
 使用git tag命令查看所有标签。
 
-34.查看标签详情。
+35.查看标签详情。
 使用git show <tag>查看标签详情。
 
-35.删除标签。
+36.删除标签。
 使用git tag -d <tag>命令删除指定标签。
 
-36.推送标签到远程库。
+37.推送标签到远程库。
 使用git push origin <tag>命令推送指定标签到远程库。
 使用git push origin --tags命令推送所有标签到远程库。
 
-37.删除远程库中的标签。
+38.删除远程库中的标签。
 先删除本地标签，再使用git push origin :refs/tags/<tag>命令删除远程库中的标签。
 
-38.删除远程库。
+39.删除远程库。
 使用git remote rm <name>命令删除远程库。
 
-39.忽略文件。
+40.忽略文件。
 在工作区的根目录下新建.gitignore文件，在文件中添加要忽略的文件名。windows平台下，使用文本编辑器保存，可以保存无文件名的.gitignore文件。
 忽略目录下的所有文件/path/*。
 https://github.com/github/gitignore内有各种写好的配置文件。
 
-40.检查忽略文件。
+41.检查忽略文件。
 使用git check-ignore -v <file>命令检查文件被哪个规则忽略。
 
-41.给命令取别名。
+42.给命令取别名。
 使用git config [--global] alias.<alias> <cmd>命令为命令取别名。使用--global参数则适用于所有库，不使用则只适用于当前库。
 例：git config alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-42.取消命令的别名。
+43.取消命令的别名。
 使用git config [--global] --unset alias.<alias> 命令取消命令的别名。使用--global参数则适用于所有库，不使用则只适用于当前库。
 
-43.将分支变基到目标分支。
+44.将分支变基到目标分支。
 使用git rebase <base branch>命令将当前分支相对于base branch的修改变基到base branch。
 使用git rebase <base branch> <source branch>命令将source branch相对于base branch的修改变基到base branch。
 使用git rebase --onto <base branch> <feature branch> <source branch>命令将source branch相对于feature branch的修改变基到base branch。
 
-44.归档版本库。
+45.归档版本库。
 使用git archive <branch> --format=zip > <name.zip>命令将版本库打包成zip压缩包。
 
-45.查看分支间的提交记录区别。
+46.查看分支间的提交记录区别。
 使用git log <destination branch>..<source branch>命令显示在source branch分支中已提交还未合并到destination branch分支的提交记录。
 使用git log <branch 1> <branch 2> ^|--not <branch 3>命令显示包含在branch 1和branch 2分支中，但不包含在branch 3分支中的提交记录。
 使用git log <branch 1>...<branch 2>命令显示被两个分支其中一个包含，而不被另一个分支包含的提交记录。
