@@ -112,56 +112,59 @@ git config --global user.email "youremail@example.com"
 31.删除本地分支跟踪的远程分支。
 使用git branch --unset-upstream命令删除本地分支跟踪的远程分支。
 
-32.获取远程库的版本。
+32.删除远程库中的分支。
+使用git push <remote> -d <branch>命令删除远程库中的分支。
+
+33.获取远程库的版本。
 使用git pull [remote] [branch]命令获取远程库的最新版本。
 
-33.新建标签。
+34.新建标签。
 使用git tag <tag> [commit]命令为某个提交版本新建标签，不加版本号，则在最新提交版本上新建标签。
 使用git tag -a <tag> -m <message>命令可以指定标签信息。
 
-34.查看标签。
+35.查看标签。
 使用git tag命令查看所有标签。
 
-35.查看标签详情。
+36.查看标签详情。
 使用git show <tag>查看标签详情。
 
-36.删除标签。
+37.删除标签。
 使用git tag -d <tag>命令删除指定标签。
 
-37.推送标签到远程库。
+38.推送标签到远程库。
 使用git push origin <tag>命令推送指定标签到远程库。
 使用git push origin --tags命令推送所有标签到远程库。
 
-38.删除远程库中的标签。
+39.删除远程库中的标签。
 先删除本地标签，再使用git push origin :refs/tags/<tag>命令删除远程库中的标签。
 
-39.删除远程库。
+40.删除远程库。
 使用git remote rm <name>命令删除远程库。
 
-40.忽略文件。
+41.忽略文件。
 在工作区的根目录下新建.gitignore文件，在文件中添加要忽略的文件名。windows平台下，使用文本编辑器保存，可以保存无文件名的.gitignore文件。
 忽略目录下的所有文件/path/*。
 https://github.com/github/gitignore内有各种写好的配置文件。
 
-41.检查忽略文件。
+42.检查忽略文件。
 使用git check-ignore -v <file>命令检查文件被哪个规则忽略。
 
-42.给命令取别名。
+43.给命令取别名。
 使用git config [--global] alias.<alias> <cmd>命令为命令取别名。使用--global参数则适用于所有库，不使用则只适用于当前库。
 例：git config alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-43.取消命令的别名。
+44.取消命令的别名。
 使用git config [--global] --unset alias.<alias> 命令取消命令的别名。使用--global参数则适用于所有库，不使用则只适用于当前库。
 
-44.将分支变基到目标分支。
+45.将分支变基到目标分支。
 使用git rebase <base branch>命令将当前分支相对于base branch的修改变基到base branch。
 使用git rebase <base branch> <source branch>命令将source branch相对于base branch的修改变基到base branch。
 使用git rebase --onto <base branch> <feature branch> <source branch>命令将source branch相对于feature branch的修改变基到base branch。
 
-45.归档版本库。
+46.归档版本库。
 使用git archive <branch> --format=zip > <name.zip>命令将版本库打包成zip压缩包。
 
-46.查看分支间的提交记录区别。
+47.查看分支间的提交记录区别。
 使用git log <destination branch>..<source branch>命令显示在source branch分支中已提交还未合并到destination branch分支的提交记录。
 使用git log <branch 1> <branch 2> ^|--not <branch 3>命令显示包含在branch 1和branch 2分支中，但不包含在branch 3分支中的提交记录。
 使用git log <branch 1>...<branch 2>命令显示被两个分支其中一个包含，而不被另一个分支包含的提交记录。
